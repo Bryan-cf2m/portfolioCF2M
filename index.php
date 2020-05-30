@@ -24,7 +24,7 @@ if(!isset($_GET["p"])){
             require "pages/tuto.php";
             break;
         case "contact":
-            require "pages/mcontact.php";
+            require "pages/contact.php";
             break;
         case "login":
             require "pages/connexion.php";
