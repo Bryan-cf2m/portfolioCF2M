@@ -1,0 +1,288 @@
+@font-face {
+    font-family: 'HKMI';
+    src: url('../fonts/font-faceHKGrotesk/HKGrotesk-MediumItalic.woff2') format('woff2'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-MediumItalic.woff') format('woff'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HKSB';
+    src: url('../fonts/font-faceHKGrotesk/HKGrotesk-SemiBold.woff2') format('woff2'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-SemiBold.woff') format('woff'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HKEB';
+    src: url('../fonts/font-faceHKGrotesk/HKGrotesk-ExtraBold.woff2') format('woff2'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-ExtraBold.woff') format('woff'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HKB';
+    src: url('../fonts/font-faceHKGrotesk/HKGrotesk-Bold.woff2') format('woff2'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-Bold.woff') format('woff'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HKBl';
+    src: url('../fonts/font-faceHKGrotesk/HKGrotesk-Black.woff2') format('woff2'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-Black.woff') format('woff'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HKM';
+    src: url('../fonts/font-faceHKGrotesk/HKGrotesk-Medium.woff2') format('woff2'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-Medium.woff') format('woff'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HKI';
+    src: url('../fonts/font-faceHKGrotesk/HKGrotesk-Italic.woff2') format('woff2'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-Italic.woff') format('woff'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HKR';
+    src: url('../fonts/font-faceHKGrotesk/HKGrotesk-Regular.woff2') format('woff2'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-Regular.woff') format('woff'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HKSBI';
+    src: url('../fonts/font-faceHKGrotesk/HKGrotesk-SemiBoldItalic.woff2') format('woff2'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-SemiBoldItalic.woff') format('woff'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HKBI';
+    src: url('../fonts/font-faceHKGrotesk/HKGrotesk-BoldItalic.woff2') format('woff2'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-BoldItalic.woff') format('woff'),
+        url('../fonts/font-faceHKGrotesk/HKGrotesk-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+body{
+    background-color: #00061E;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: HKEB;
+    color: #67FF9F;
+}
+::-moz-selection { /* Code for Firefox */
+    color: #181E37;
+    background: white;
+    opacity: 1;
+  }
+  
+  ::selection {
+    color: #181E37;
+    background: white;
+    opacity: 1;
+  }
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color:#181E37;
+    border-radius: 10px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #67FF9F; 
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    box-shadow: 2px 3px 0px #FFF;
+  }
+
+.navbar-nav > .active > a {
+    text-shadow: 2px 2px 0px #FFF;    
+}
+
+.page-section{
+    padding: 5rem 0;
+}
+
+/* Début Nav */
+.navbar a{
+    font-size: 1.5em;
+    color: #67FF9F !important;
+}
+
+.navbar a:hover{
+    font-size: 1.5em;
+    text-shadow: 2px 2px 0px #FFF;
+}
+
+.navbar .logo{
+
+    font-size: 3em;
+}
+
+.navbar .logo:hover{
+
+    font-size: 3em;
+    text-shadow: 2px 2px 0px #FFF;
+}
+/* Fin Nav */
+/* Début Footer */
+.bg-footer {
+    background-color: #181E37;
+}
+
+
+
+footer, footer a{ 
+    color: #FFF;
+}
+
+footer a:hover{ 
+    color: #FFF;
+    text-shadow: 1px 1px 0px #67FF9F;
+    text-decoration: none;
+}
+/* Fin Footer */
+/* Début Accueil */
+.bs{
+
+    font-size: 3em;
+    color: #67FF9F;
+    line-height: 0em;
+}
+
+.bs:hover{
+    color: #67FF9F;
+    text-shadow: 2px 2px 0px #FFF;
+    text-decoration: none;
+
+}
+
+.fa.fa-long-arrow-down:hover{
+    text-shadow: 2px 2px 0px #FFF;
+
+}
+.imgheader{
+    max-width: 100%;    
+    height: auto;
+}
+/* Fin Accueil */
+
+/* Début Projets récents */
+.titre-section{
+
+    text-shadow: 2px 2px 0px #FFF;
+}
+
+.titre-voirplus{
+
+    font-size: 1.5em;
+
+}
+
+.titre-voirplus:hover{
+    text-shadow: 2px 2px 0px #FFF;
+    cursor: pointer;
+}
+
+.projetsR img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    transition: 0.05s ease-in ;
+}
+
+.projetsR img:hover{
+    box-shadow: 8px 8px 0px #67FF9F;
+    cursor: pointer;
+}
+/* Fin Projets récents */
+
+/* Début Login */
+.titre-login{
+    color: #67FF9F;
+    text-shadow: 2px 2px 0px #FFF;
+
+}
+
+/* Fin Login */
+/* Début Fomulaires - Tous les input/bouton */
+.btn-perso{
+    color: #67FF9F;
+    font-size: 1.4em;
+}
+
+.btn-perso:hover{
+    color: #67FF9F;
+    text-shadow: 2px 2px 0px #FFF;
+
+}
+
+input[type=login], input[type=password],input[type=text], .textareaperso{
+    background-color: #181E37;
+    border-radius: 60px;
+    border: solid 2px #67FF9F;
+    height: 60px;
+    color: #FFF;
+}
+
+input[type=login]:focus, input[type=password]:focus, input[type=text]:focus, .textareaperso:focus{
+    background-color: #181E37;
+    border: solid 2px #67FF9F;
+    color: #FFF;
+    box-shadow: 4px 4px 0px #FFF;
+}
+
+.textareaperso{
+    border-radius: 20px;
+    
+}
+
+
+.icoperso.fa {
+
+    font-size: 1.2em;
+    color: #67FF9F ;
+    padding-right: 20px;
+    text-align: center;
+    text-decoration: none;
+} 
+
+.icoperso.fa:hover{
+    text-shadow: 1px 1px 0px #FFF;
+
+
+}
+/* Début Fomulaires - Tous les input/bouton */
+
+
