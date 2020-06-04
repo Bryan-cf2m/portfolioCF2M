@@ -188,6 +188,22 @@ footer a:hover{
 
 }
 
+.bs-2{
+
+    font-size: 3em;
+    color: #67FF9F;
+    line-height: 0em;
+    text-decoration: none;
+    text-shadow: 2px 2px 0px #FFF;
+}
+
+.bs:hover{
+    color: #67FF9F;
+    text-shadow: 2px 2px 0px #FFF;
+    text-decoration: none;
+
+}
+
 .fa.fa-long-arrow-down:hover{
     text-shadow: 2px 2px 0px #FFF;
 
@@ -282,6 +298,15 @@ input[type=login]:focus, input[type=password]:focus, input[type=text]:focus, .te
     text-shadow: 1px 1px 0px #FFF;
 
 
+}
+
+ion-icon{
+    font-size: 4em;
+    color: #67FF9F ;
+    padding-right: 20px;
+    text-align: center;
+    text-decoration: none;
+    
 }
 /* Début Fomulaires - Tous les input/bouton */
 
