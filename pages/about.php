@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b4c357390b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
     <title>A Propos</title>
   </head>
@@ -20,7 +20,7 @@
   ?>
   <section class="container page-section">
       <div class="row pb-5">
-          <div class="col-6 align-self-center">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 align-self-center">
             <p class="bs-2 pb-2">BRYAN SCHUTTERS </p>
             <p>Développeur web</p>
             <br>
@@ -29,7 +29,12 @@
       </div>
       <div class="row">
         <div class="col-6 d-flex justify-content-start">
-        <ion-icon name="logo-html5"></ion-icon>
+          <a href="https://www.w3schools.com/html/" target="_blank" class="icoabout fab fa-html5"></a>
+          <a href="https://www.w3schools.com/css/" target="_blank" class="icoabout fab fa-css3-alt"></a>
+          <a href="https://www.javascript.com" target="_blank" class="icoabout fab fa-js"></a>
+          <a href="https://laravel.com" target="_blank" class="icoabout inc fab fa-laravel"></a>
+          <a href="https://angular.io" target="_blank" class="icoabout inc fab fa-angular"></a>
+          <a href="https://vuejs.org" target="_blank" class="icoabout inc fab fa-vuejs"></a>
         </div>
       </div>
 </section>

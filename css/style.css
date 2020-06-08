@@ -300,14 +300,29 @@ input[type=login]:focus, input[type=password]:focus, input[type=text]:focus, .te
 
 }
 
-ion-icon{
-    font-size: 4em;
+
+/* Début Fomulaires - Tous les input/bouton */
+.icoabout.inc {
+    color: rgb(128, 128, 128, 0.3);
+
+}
+
+.icoabout{
+    font-size: 3em;
     color: #67FF9F ;
     padding-right: 20px;
     text-align: center;
     text-decoration: none;
-    
 }
-/* Début Fomulaires - Tous les input/bouton */
 
+a.icoabout:hover{
+    color:#67FF9F;
+    text-decoration: none;
+    text-shadow: 2px 2px 0px #FFF;
+}
 
+a.icoabout.inc:hover{
+    color: rgba(150, 150, 150, 0.7);
+    text-decoration: none;
+    text-shadow: none;
+}
