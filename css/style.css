@@ -240,7 +240,8 @@ footer a:hover{
 
 .projetsR img:hover{
     box-shadow: 8px 8px 0px #67FF9F;
-    cursor: pointer;
+    cursor: crosshair;
+    opacity: 0.2;
 }
 /* Fin Projets récents */
 
