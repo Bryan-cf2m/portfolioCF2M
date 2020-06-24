@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
-    <title>Tutos</title>
+    <title>Formulaire de contact en PHP</title>
   </head>
   <body>
   <?php 
@@ -18,26 +18,15 @@
   require('pages/header.php');
   
   ?>
+
 <section class="container page-section px-3">
-  <h2 class="titre-section text-center pb-5 ">TUTOS</h2>
-  <div class="jumbotron">
-    <span class="badge badge-success">NOUVEAU TUTO</span>
-    <h1 class="display-4">Formulaire de contact en php</h1>
-    <p class="lead">Apprendre à coder un formulaire de contact en php.</p>
-    <hr class="my-4">
-    <a class="btn-perso btn" href="?p=formphp" role="button">LIRE LA SUITE</a>
-  </div>
-
-  <div class="jumbotron">
-    <span class="badge badge-success">NOUVEAU TUTO</span>
-    <h1 class="display-4">Hello, world!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    <hr class="my-4">
-    <a class="btn-perso btn" href="#" role="button">LIRE LA SUITE</a>
-  </div>
+  <h2 class="titre-section text-center pb-5">FORMULAIRE DE CONTACT PHP</h2>
+  <p>Dans cette video, on apprend à réaliser un formulaire de contact à l'aide de bootstrap afin de permettre la saisie d'informations. On apprend ensuite à traiter les informations à l'aide du PHP afin d'envoyer le contenu fu formulaire de contact par mail. 
+    <br>
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Dw9R0NEXuYo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+    <a class="btn-block btn-perso btn" href="?p=tuto" role="button">RETOUR</a>
 </section>
-
-
 
 
 

@@ -18,7 +18,7 @@
   require('pages/header.php');
   
   ?>
-<div class="container contact-form text-center page-section">
+<div class="container contact-form text-center page-section px-3">
     <h1>ME CONTACTER</h1>
     <form method="post">
         <div class="row justify-content-md-center d-flex justify-content-center">

@@ -26,11 +26,17 @@ if(!isset($_GET["p"])){
         case "contact":
             require "pages/contact.php";
             break;
+        case "link":
+            require "pages/liens.php";
+            break;
         case "login":
             require "pages/connexion.php";
             break;
         case "about":
             require "pages/about.php";
+            break;
+        case "formphp":
+            require "pages/tutos/formphp.php";
             break;
         default:
             require "pages/accueil.php";

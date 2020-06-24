@@ -10,10 +10,13 @@
             <a class="nav-link" href="?p=accueil">ACCUEIL <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="?p=rea">RÉALISATIONS</a>
+            <a class="nav-link" href="?p=rea">GALERIE</a>
           </li>
           <li class="nav-item">
           <a class="nav-link" href="?p=tuto">TUTOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="?p=link">LIENS</a>
           </li>
           <li class="nav-item">
           <a class="nav-link" href="?p=contact">CONTACT</a>

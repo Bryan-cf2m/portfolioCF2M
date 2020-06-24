@@ -327,3 +327,36 @@ a.icoabout.inc:hover{
     text-decoration: none;
     text-shadow: none;
 }
+/* Fin Fomulaires - Tous les input/bouton */
+/* Début Page tuto */
+
+.jumbotron { 
+    background-color: #181E37!important;
+
+}
+
+.btn-perso:focus {
+    outline: 0 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.badge-success {
+    color :#181E37 ;
+    background-color: #67FF9F!important;
+}
+
+iframe{
+    margin-top: 30px;
+    width: 100%;
+    min-height: 450px;
+}
+
+/* Fin Page tuto */
+/* Début Page liens */
+.card { 
+    background-color: #181E37!important;
+
+}
+
+/* Fin Page liens */

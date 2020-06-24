@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
-    <title>Réalisations</title>
+    <title>Galerie</title>
   </head>
   <body>
   <?php 
@@ -20,7 +20,7 @@
   ?>
 
 <section class="container page-section">
-  <h2 class="titre-section text-center pb-5">RÉALISATIONS</h2>
+  <h2 class="titre-section text-center pb-5">GALERIE</h2>
   <div class="container projetsR">
     <div class="row">
       <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
