@@ -1,3 +1,38 @@
+<?php 
+if(isset($_POST['thelogin'],$_POST['thepwd'])){
+  $thelogin = htmlspecialchars(strip_tags(trim($_POST['thelogin'])), ENT_QUOTES);
+  $thepwd = htmlspecialchars(strip_tags(trim($_POST['thepwd'])), ENT_QUOTES);
+}
+
+if(!empty($thelogin)&&!empty($thepwd)){
+  // requête sql
+  $sql = "SELECT * FROM user WHERE thelogin='$thelogin' AND thepwd='$thepwd';";
+ 
+  // suppression (mode parano) du risque d'injection sql, ne marche qu'avec mysqli et bug si on a déjà protégé nos variables, devient inutile lors de requête préparée
+  //$sql = mysqli_real_escape_string($db, $sql);
+ 
+  //execution de la requête
+  $recup_user = mysqli_query($db, $sql) or die(mysqli_error($db)); 
+ 
+  // 1 ligne si on arrive à se connecter, 0 sinon.
+  if(mysqli_num_rows($recup_user)==1){
+      //création de la connexion à notre session
+      //on remplit la session avec le tableau associatif de notre requête
+      $_SESSION = mysqli_fetch_assoc($recup_user);
+      //On garde notre identifiant de session (PHPSESSID)
+      $_SESSION['notresession'] = session_id();
+      //On supprime le mot de passe par soucis de sécurité avec unset
+      unset($_SESSION['thepwd']);
+      //redirection vers notre controleur frontal
+      header("Location: ./");
+  }else{
+      $message = "Login ou mot de passe incorrect(s)";
+  }
+} else {
+
+  $message = "Login ou mot de passe au format(s) invalide(s)";
+};
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -23,24 +58,22 @@
     <h1 class="titre-login">login</h1>
     <div class="row justify-content-md-center d-flex justify-content-center">
         <div class="col-md-4 col-10 py-3">
-            <form class="form-signin">
-                <div class="text-center mb-4">
-                </div>
-                <div class="form-label-group pb-3">
-                    <input type="login" id="inputLogin" class="form-control" placeholder="NOM D'UTILISATEUR" required autofocus />
-                </div>
-                <div class="form-label-group pb-3">
-                    <input type="password" id="inputPassword" class="form-control" placeholder="MOT DE PASSE" required />
-                </div>
-                <button class="btn-perso btn btn-md float-right" type="submit">SE CONNECTER  <i class="fa fa-arrow-circle-right"></i></button>
-            </form>
+          <form method="post" action="">
+            <?php 
+                if(isset($message)) echo "<p>$message</p>";
+            ?>
+            <div class="form-group form-row">
+                <input name="thelogin" type="text" class="form-control" id="votreLogin" aria-describedby="loginHelp" placeholder="NOM D'UTILISATEUR" required>
+            </div>
+            <div class="form-group form-row">
+              <input name="thepwd" type="password" class="form-control" id="votrePWD" placeholder="MOT DE PASSE" required>
+            </div>
+            <button class="btn-perso btn btn-md float-right" type="submit">SE CONNECTER  <i class="fa fa-arrow-circle-right"></i></button>
+
+        </form>
         </div>
     </div>
 </div>
-
-
-
-
 <?php 
   
   require('pages/footer-fixed.php');
