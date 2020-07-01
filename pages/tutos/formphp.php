@@ -25,7 +25,9 @@
     <br>
     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Dw9R0NEXuYo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </p>
-    <a class="btn-block btn-perso btn" href="?p=tuto" role="button">RETOUR</a>
+    <div class="col text-center">
+      <a class="btn-perso btn" href="?p=tuto" role="button">RETOUR</a>
+    </div>
 </section>
 
 

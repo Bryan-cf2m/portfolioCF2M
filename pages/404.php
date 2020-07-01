@@ -18,10 +18,22 @@
   require('pages/header.php');
   
   ?>
-
-
-
-
+<section class="container page-section px-3">
+  <div class="row mb-5">
+    <div class="col-md-12">
+      <img src="img/404.png" class="img-fluid mx-auto d-block" alt="">
+    </div>
+  </div>
+  <div class="row align-self-center ">
+    <div class="col">
+      <h2 class="text-center">OUPS !</h2>
+      <p class="text-center">La page que vous recherchez n'existe pas.</p>
+      <div class="col text-center">
+        <a class="btn-perso btn mx-auto" href="?p=formphp" role="button">RETOUR À L'ACCUEIL</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <?php 
   
