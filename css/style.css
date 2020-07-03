@@ -131,26 +131,31 @@ body{
 }
 
 .page-section{
-    padding: 5rem 0;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
+div.testino{ 
+    background-color: #181E37!important;
+
+}
 /* Début Nav */
-.navbar a{
+.nav-public.navbar a{
     font-size: 1.5em;
     color: #67FF9F !important;
 }
 
-.navbar a:hover{
+.nav-public.navbar a:hover{
     font-size: 1.5em;
     text-shadow: 2px 2px 0px #FFF;
 }
 
-.navbar .logo{
+.nav-public.navbar .logo{
 
     font-size: 3em;
 }
 
-.navbar .logo:hover{
+.nav-public.navbar .logo:hover{
 
     font-size: 3em;
     text-shadow: 2px 2px 0px #FFF;
@@ -360,3 +365,49 @@ iframe{
 }
 
 /* Fin Page liens */
+
+/* PANEL ADMIN */
+/* PANEL ADMIN */
+/* PANEL ADMIN */
+
+.text-header-admin {
+
+    font-size:1.5em;
+    color: #67FF9F!important;
+}
+
+.text-header-admin:hover{
+    text-shadow: ;
+}
+
+.icologout {
+    font-size: 1em!important;
+    color: #67FF9F;
+}
+
+.icologout:hover{
+    color:#67FF9F;
+    text-decoration: none;
+    text-shadow: 2px 2px 0px #FFF;
+}
+
+.nav-panel-admin{
+
+    background-color: #181E37;
+}
+
+.cat-panel-admin {
+    background-color: #181E37;
+    height: 230px;
+    border-radius: 20px;
+}
+
+.ico-pan-ad{
+    font-size: 4em;
+    color: white;
+}
+
+.text-pan-ad{
+    font-size: 2em;
+    color: white;
+}

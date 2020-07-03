@@ -1,4 +1,4 @@
-<nav class="navbar navbar-right navbar-expand-lg navbar-dark">
+<nav class="nav-public navbar navbar-right navbar-expand-lg navbar-dark">
 
       <a class="navbar-brand logo" href="#">BRYAN.</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,16 +13,16 @@
             <a class="nav-link" href="?p=rea">GALERIE</a>
           </li>
           <li class="nav-item <?php if(isset($_GET['p'])&&$_GET['p']=="tuto") echo "active" ?>">
-          <a class="nav-link" href="?p=tuto">TUTOS</a>
+            <a class="nav-link" href="?p=tuto">TUTOS</a>
           </li>
           <li class="nav-item <?php if(isset($_GET['p'])&&$_GET['p']=="link") echo "active" ?>">
             <a class="nav-link" href="?p=link">LIENS</a>
           </li>
           <li class="nav-item <?php if(isset($_GET['p'])&&$_GET['p']=="contact") echo "active" ?>">
-          <a class="nav-link" href="?p=contact">CONTACT</a>
+            <a class="nav-link" href="?p=contact">CONTACT</a>
           </li>
           <li class="nav-item <?php if(isset($_GET['p'])&&$_GET['p']=="login") echo "active" ?>">
-          <a class="nav-link" href="?p=login"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
+            <a class="nav-link" href="?p=login"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
           </li>
         </ul>
       </div>
