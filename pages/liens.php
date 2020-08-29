@@ -43,8 +43,11 @@ if(!$count){
 
 <section class="container page-section px-3">
   <h2 class="titre-section text-center pb-5 ">LIENS</h2>
-    <div class="row row-cols-1 row-cols-md-3">
-    <?php
+    <div class="row row-cols-1 row-cols-md-3 d-flex justify-content-center">
+    <?php if (isset($message)) {
+            echo "<p class='text-center'>$message</p>";
+    } else {
+    
         foreach ($tous_les_liens as $item){
             ?>
             <div class="col mb-4">
@@ -58,6 +61,7 @@ if(!$count){
             </div>
     <?php
         }
+    }
     ?>
     </div>
 </section>
