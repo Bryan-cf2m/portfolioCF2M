@@ -1,3 +1,11 @@
+<?php 
+// protection de l'accès dans le cas ou la session n'existe pas ou n'est pas/plus valide
+if(!isset($_SESSION['notresession'])||$_SESSION['notresession']!==session_id()) {
+    header("Location: disconnect.php");
+    exit();
+}
+
+?> 
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,23 +16,36 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
-    <title>CRUD Galerie</title>
+    <script src="https://kit.fontawesome.com/b4c357390b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+    <title>404</title>
   </head>
   <body>
   <?php 
   
-  require 'admin/header-admin.php';
+  require('admin/header-admin.php');
   
   ?>
-
-
-
+<section class="container page-section px-3">
+  <div class="row mb-5">
+    <div class="col-md-12">
+      <img src="img/404.png" class="img-fluid mx-auto d-block" alt="">
+    </div>
+  </div>
+  <div class="row align-self-center ">
+    <div class="col">
+      <h2 class="text-center">OUPS !</h2>
+      <p class="text-center">La page que vous recherchez n'existe pas.</p>
+      <div class="col text-center">
+        <a class="btn-perso btn mx-auto" href="?admin=paneladmin" role="button">RETOUR À L'ACCUEIL</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <?php 
   
-  require 'pages/footer.php';
+  require('pages/footer-fixed.php');
   
   ?>
     <!-- Optional JavaScript -->

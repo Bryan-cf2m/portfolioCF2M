@@ -1,4 +1,23 @@
+<?php 
+// requête permettant de récupérer les liens dans la base de donnée
+$sql="SELECT * FROM liens ORDER BY thetitle ASC;";
+$recup_liens = mysqli_query($db,$sql) or die(mysqli_error($db));
 
+// on compte le nombre de lignes de résultat
+$count = mysqli_num_rows($recup_liens);
+
+// si on a pas de résultat
+// if(empty($count))
+// if($count===0)
+// mode court, si $count vaut 1 => true on l'inverse = false. si $count vaut 0 => false on l'inverse = true
+if(!$count){
+    $message = "Pas encore de liens pour le moment";
+}else{
+    // utilisation de mysqli_fetch_all qui va formater tous les résultats dans un tableau indexé, le paramètre non obligatoire MYSQLI_ASSOC fait que chaque ligne de ce tableau sera un tableau associatif
+    $tous_les_liens = mysqli_fetch_all($recup_liens,MYSQLI_ASSOC);
+    // var_dump($tous_les_liens);
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -19,47 +38,28 @@
   require('pages/header.php');
   
   ?>
+
+
+
 <section class="container page-section px-3">
   <h2 class="titre-section text-center pb-5 ">LIENS</h2>
-
     <div class="row row-cols-1 row-cols-md-3">
-    <div class="col mb-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <h5 class="card-title titre-section">OPENCLASSROOMS</h5>
-          <p class="card-text">Site référence de tutoriels et de formations permettant d'apprendre un langage de A à Z.</p>
-          <a class="btn-perso btn btn-sm" href="?p=formphp" target="_blank" role="button">LIRE LA SUITE</a>
-        </div>
-      </div>
+    <?php
+        foreach ($tous_les_liens as $item){
+            ?>
+            <div class="col mb-4">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title titre-section"><?=$item['thetitle']?></h5>
+                    <p class="card-text"><?php echo html_entity_decode($item['thetext'],ENT_QUOTES);?></p>
+                    <a class="btn-perso btn btn-sm float-right" href="<?=$item['theurl']?>" target="_blank" role="button">VOIR</a>
+                  </div>
+                </div>
+            </div>
+    <?php
+        }
+    ?>
     </div>
-    <div class="col mb-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <h5 class="card-title titre-section">GRAFIKART</h5>
-          <p class="card-text">Site de tutoriels et de formations permettant d'apprendre un langage de A à Z.</p>
-          <a class="btn-perso btn btn-sm" href="?p=formphp" target="_blank" role="button">LIRE LA SUITE</a>
-        </div>
-      </div>
-    </div>
-    <div class="col mb-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <h5 class="card-title titre-section">W3SCHOOLS</h5>
-          <p class="card-text">Site de documentation pour plusieurs langages tels que l'HTML, le CSS, le JS, etc...</p>
-          <a class="btn-perso btn btn-sm" href="https://www.w3schools.com" target="_blank" role="button">VOIR</a>
-        </div>
-      </div>
-    </div>
-    <div class="col mb-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <h5 class="card-title titre-section">STACKOVERFLOW</h5>
-          <p class="card-text">Forum d'entre-aide pour les développeurs nécessitant de l'aide. Il suffis de faire un post avec un maximum d'informations pour que d'autres utilisateurs nous expliquent les problèmes et nous fournissent des solutions.</p>
-          <a class="btn-perso btn btn-sm" href="https://stackoverflow.com" target="_blank" role="button">LIRE LA SUITE</a>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 

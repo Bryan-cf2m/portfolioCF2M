@@ -1,0 +1,41 @@
+.pre code{
+    background-color:#222a48 ;
+    border-radius: 16px;
+}
+
+.carrés{
+    background-color:#222a48;
+    border-radius: 16px;
+
+}
+
+
+.c1{
+    background-color: #67FF9F;
+    width: 150px;
+    height: 150px;
+    margin: 15px;	
+}
+
+.c2{
+    background-color: #67FF9F;
+    width: 150px;
+    height: 150px;
+    margin: 15px;	
+}
+
+.c3{
+    background-color: #67FF9F;
+    width: 150px;
+    height: 150px;
+    margin: 15px;	
+}
+
+.container-tuto p{
+    color:white;
+}
+
+.colored.a:hover{
+    text-decoration:none;
+    color: white;
+}

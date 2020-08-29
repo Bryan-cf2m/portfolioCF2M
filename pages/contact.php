@@ -1,3 +1,31 @@
+<?php 
+
+//Ajout de liens - Si le formulaire est envoyé
+if(isset($_POST['thename'],$_POST['theprenom'],$_POST['themail'],$_POST['themessage'])){
+    // si erreur vaudra "" => empty
+    $thename = htmlspecialchars(strip_tags(trim($_POST['thename'])),ENT_QUOTES);
+    $theprenom = htmlspecialchars(strip_tags(trim($_POST['theprenom'])),ENT_QUOTES);
+    // si erreur vaudra false => !$theurl => $theurl!=true => $theurl==false => $theurl===false
+    $themail = filter_var($_POST['themail'],FILTER_VALIDATE_EMAIL);
+    // si erreur vaudra "" => empty
+    $themessage = htmlspecialchars(strip_tags(trim($_POST['themessage'])),ENT_QUOTES);
+
+    //Si on a une erreur de type
+    if(empty($thename)||empty($theprenom)||empty($themessage)||$themail===false){
+      $erreur = "Les données sont incomplètes ou incorrectes.";
+
+    }else{
+
+      //sql
+      $sql = "INSERT INTO contacts (thename, theprenom, themail, themessage) VALUES ('$thename','$theprenom','$themail','$themessage');";
+      $sql2 = "INSERT INTO bddcontacts (thename, theprenom, themail) VALUES ('$thename','$theprenom','$themail');";
+      $insert = mysqli_query($db, $sql) or die(mysqli_error($db));
+      $insert2 = mysqli_query($db, $sql2) or die(mysqli_error($db));
+      header("Location: ?p=mess-envoye");
+  }
+}
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -20,25 +48,23 @@
   ?>
 <div class="container contact-form text-center page-section px-3">
     <h1>ME CONTACTER</h1>
+    <?php if(isset($erreur)){ echo "<p>$erreur</p>";} ?>
     <form method="post">
         <div class="row justify-content-md-center d-flex justify-content-center">
             <div class="col-md-6 py-3">
                 <div class="form-group">
-                    <input type="text" name="txtNom" class="form-control" placeholder="VOTRE NOM *" value="" />
+                    <input type="text" name="thename" id="thename" class="form-control" placeholder="VOTRE NOM *" required/>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="txtPrenom" class="form-control" placeholder="VOTRE PRENOM *" value="" />
+                    <input type="text" name="theprenom" id="theprenom" class="form-control" placeholder="VOTRE PRENOM *" required/>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="txtMail" class="form-control" placeholder="VOTRE MAIL *" value="" />
-                </div>
-                <div class="form-group">
-                    <input type="text" name="txtSujet" class="form-control" placeholder="SUJET *" value="" />
+                    <input type="text" name="themail" id="themail" class="form-control" placeholder="VOTRE MAIL *" required/>
                 </div>
             </div>
             <div class="col-md-6 py-3">
                 <div class="form-group">
-                    <textarea name="txtMsg" class="form-control textareaperso" placeholder="VOTRE MESSAGE ... *" rows="9" cols="33"></textarea>
+                    <textarea name="themessage" id="themessage" class="form-control textareaperso" placeholder="VOTRE MESSAGE ... *" rows="8" cols="33" required></textarea>
                 </div>
                 <div class="row">
                     <div class="col-6 d-flex justify-content-start">

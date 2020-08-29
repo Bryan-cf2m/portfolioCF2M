@@ -62,7 +62,7 @@
       </div>
     </div>
   </div>
-  <h2 class="titre-voirplus text-center">VOIR PLUS DE PROJETS <i class="fa fa-arrow-circle-right"></i></h2>
+  <h2 class="titre-voirplus text-center"><a class="btn btn-perso" href="?p=rea"> VOIR PLUS DE PROJETS </a><i class="fa fa-arrow-circle-right"></i></h2>
 
 
 </section>

@@ -1,3 +1,11 @@
+<?php 
+// protection de l'accès dans le cas ou la session n'existe pas ou n'est pas/plus valide
+if(!isset($_SESSION['notresession'])||$_SESSION['notresession']!==session_id()) {
+    header("Location: disconnect.php");
+    exit();
+}
+
+?> 
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,15 +30,15 @@
 <div class="container pt-4">
   <div class="row text-center">
     <div class="col-md-4 col-sm-12 pb-4">
-        <div class="cat-panel-admin d-flex align-items-center justify-content-center">
-            <div class="flex-column align-self-center">
-                <i class="ico-pan-ad fas fa-envelope"></i>
-                <p class="text-pan-ad">MESSAGES</p>
-            </div>
+        <div class="cat-panel-admin d-flex align-items-center justify-content-center" onclick="location.href='?admin=messadmin';" style="cursor:pointer;">
+                <div class="flex-column align-self-center" href="#">
+                    <i class="ico-pan-ad fas fa-envelope"></i>
+                    <p class="text-pan-ad">MESSAGES</p>
+                </div>
         </div>
     </div>
     <div class="col-md-4 col-sm-12 pb-4">
-        <div class="cat-panel-admin d-flex align-items-center justify-content-center">
+        <div class="cat-panel-admin d-flex align-items-center justify-content-center" onclick="location.href='?admin=galerieadmin';" style="cursor:pointer;">
             <div class="flex-column align-self-center">
                 <i class="ico-pan-ad fas fa-images"></i>
                 <p class="text-pan-ad">GALERIE</p>
@@ -38,7 +46,7 @@
         </div>
     </div>
     <div class="col-md-4 col-sm-12 pb-4">
-        <div class="cat-panel-admin d-flex align-items-center justify-content-center">
+        <div class="cat-panel-admin d-flex align-items-center justify-content-center" onclick="location.href='?admin=linksadmin';" style="cursor:pointer;">
             <div class="flex-column align-self-center">
                 <i class="ico-pan-ad fas fa-link"></i>
                 <p class="text-pan-ad">LIENS</p>
@@ -46,18 +54,10 @@
         </div>
     </div>
     <div class="col-md-4 col-sm-12 pb-4">
-        <div class="cat-panel-admin d-flex align-items-center justify-content-center">
+        <div class="cat-panel-admin d-flex align-items-center justify-content-center" onclick="location.href='?admin=bddusers';" style="cursor:pointer;">
             <div class="flex-column align-self-center">
                 <i class="ico-pan-ad fas fa-user"></i>
                 <p class="text-pan-ad">UTILISATEURS</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 col-sm-12 pb-4">
-        <div class="cat-panel-admin d-flex align-items-center justify-content-center">
-            <div class="flex-column align-self-center">
-                <i class="ico-pan-ad fas fa-cog"></i>
-                <p class="text-pan-ad">PARAMETRES</p>
             </div>
         </div>
     </div>

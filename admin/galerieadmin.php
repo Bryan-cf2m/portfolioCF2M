@@ -1,3 +1,11 @@
+<?php 
+// protection de l'accès dans le cas ou la session n'existe pas ou n'est pas/plus valide
+if(!isset($_SESSION['notresession'])||$_SESSION['notresession']!==session_id()) {
+    header("Location: disconnect.php");
+    exit();
+}
+
+?> 
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,42 +16,38 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
-    <title>Tutos</title>
+    <script src="https://kit.fontawesome.com/b4c357390b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+    <title>Panel ADMIN</title>
   </head>
   <body>
   <?php 
   
-  require('pages/header.php');
+  require 'admin/header-admin.php';
   
   ?>
-<section class="container page-section px-3">
-  <h2 class="titre-section text-center pb-5 ">TUTOS</h2>
-  <div class="jumbotron">
-    <span class="badge badge-success">NOUVEAU TUTO</span>
-    <h1 class="display-4">Formulaire de contact en php</h1>
-    <p class="lead">Apprendre à coder un formulaire de contact en php.</p>
-    <hr class="my-4">
-    <a class="btn-perso btn" href="?p=formphp" role="button">LIRE LA SUITE</a>
-  </div>
 
-  <div class="jumbotron">
-    <span class="badge badge-success">NOUVEAU TUTO</span>
-    <h1 class="display-4">GSAP - Javascript</h1>
-    <p class="lead">Dynamiser son site à l'aide de Tweenmax.</p>
-    <hr class="my-4">
-    <a class="btn-perso btn" href="?p=tweenmax" role="button">LIRE LA SUITE</a>
-  </div>
-</section>
+   <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+        <?php
+
+            require 'admin/nav-verticale.php';
+
+        ?>
+        </div>
+        <div class="col py-2">
+            <h2>Galerie Admin</h2>
+            <p>On est bien sur la page galerie admin </p>
+        </div>
+    </div>
+</div>
 
 
-
-
-
+  
 <?php 
   
-  require('pages/footer-fixed.php');
+  require 'pages/footer-fixed.php';
   
   ?>
     <!-- Optional JavaScript -->

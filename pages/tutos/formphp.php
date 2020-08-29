@@ -21,7 +21,7 @@
 
 <section class="container page-section px-3">
   <h2 class="titre-section text-center pb-5">FORMULAIRE DE CONTACT PHP</h2>
-  <p>Dans cette video, on apprend à réaliser un formulaire de contact à l'aide de bootstrap afin de permettre la saisie d'informations. On apprend ensuite à traiter les informations à l'aide du PHP afin d'envoyer le contenu fu formulaire de contact par mail. 
+  <p>Dans cette video, GRAFIKART a réalisé un formulaire de contact responsive à l'aide de bootstrap. L'utilisation de bootstrap nous permet d'avoir quelque chose de propre, fonctionnel et responsive en très peu de temps. On apprend ensuite à traiter les informations étape par étape avec du PHP afin d'envoyer le contenu du formulaire de contact par mail. Le tutoriel nous apprend aussi à gérer les erreurs, dans le cas ou quelqu'un laisse un champs vide par exemple. La réalisation de ce tuto est assez facile et basique, cela permet de bien se familiariser avec le PHP pour quelqu'un qui débute.
     <br>
     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Dw9R0NEXuYo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </p>
