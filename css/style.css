@@ -572,5 +572,10 @@ button:focus {
     border-top: none;
  }
 
+ .sticky-vert{
+    position: sticky;
+    top: 78px;
+    z-index: 1020;
+}
  
 

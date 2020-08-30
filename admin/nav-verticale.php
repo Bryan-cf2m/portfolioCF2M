@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light navbar-expand-sm px-0 flex-row flex-nowrap">
+<nav class="navbar sticky-vert navbar-light navbar-expand-sm px-0 flex-row flex-nowrap">
                  <div class="navbar-collapse collapsed" id="navbarWEX">
                     <div class="nav flex-sm-column flex-row">
                         <a href="?admin=paneladmin" class="nav-v nav-item nav-link my-1"><i class="fas fa-angle-double-left"></i>&nbsp;&nbsp;RETOUR</a>

@@ -167,7 +167,7 @@ if (isset($_POST['leliens'])) {
 
             ?>
 
-              <div class="row-link row d-flex align-items-center justify-content-center m-1 mt-3">
+              <div class="row-link row d-flex align-items-center justify-content-center m-1 mt-2">
                 <div class="col-sm-10 pt-3">
                   <h4><span class="colored"><?= $tous_les_liens[$i]['thetitle'] ?></span></h4>
                   <p><a class="a" href="<?= $tous_les_liens[$i]['theurl'] ?>" target="_blank" title="<?= $tous_les_liens[$i]['thetitle'] ?>"><?= $tous_les_liens[$i]['theurl'] ?> &nbsp;<i class="fas fa-external-link-alt"></i></a></p>
@@ -182,7 +182,7 @@ if (isset($_POST['leliens'])) {
                   </div>
                 </div>
               </div>
-
+              
               <!-- Modal Edit -->
               <div class="modal fade" id="modifModal<?= $i ?>" tabindex="-1" aria-labelledby="modifModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -248,7 +248,9 @@ if (isset($_POST['leliens'])) {
     </div>
   </div>
   </div>
-
+<br>
+<br>
+<br>
 
   <?php
 

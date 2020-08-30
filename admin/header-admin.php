@@ -1,4 +1,4 @@
-<nav class="nav-panel-admin navbar navbar-right navbar-expand-lg navbar-dark mb-3">
+<nav class="nav-panel-admin navbar sticky-top navbar-right navbar-expand-lg navbar-dark mb-3">
 
       <a class="navbar-brand text-header-admin" href="?admin=paneladmin">PANEL ADMIN</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
